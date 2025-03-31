@@ -1,0 +1,140 @@
+{
+  "name": "coronate",
+  "description": "A free, easy-to-use Swiss chess tournament manager.",
+  "author": {
+    "name": "John Jackson",
+    "email": "jbpjackson+coronate@icloud.com",
+    "url": "https://johnridesa.bike/"
+  },
+  "license": "MPL-2.0",
+  "private": true,
+  "homepage": "https://coronate.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnridesabike/coronate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnridesabike/coronate/issues",
+    "email": "jbpjackson+coronate@icloud.com"
+  },
+  "scripts": {
+    "prebuild": "rescript",
+    "build": "node scripts/build.js",
+    "prestart": "rescript",
+    "start": "node scripts/start.js",
+    "pretest": "rescript",
+    "test": "node scripts/test.js --watchAll=false",
+    "test:watch": "node scripts/test.js --watchAll",
+    "test:coverage": "npm run test -- --coverage",
+    "build:rescript": "rescript",
+    "start:rescript": "rescript build -w",
+    "clean:rescript": "rescript clean",
+    "format": "rescript format -all"
+  },
+  "dependencies": {
+    "@octokit/core": "^3.4.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.0-rc.0",
+    "@reach/dialog": "^0.11.2",
+    "@reach/tabs": "^0.11.2",
+    "@reach/visually-hidden": "^0.11.1",
+    "@rescript/react": "^0.10.3",
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^11.2.7",
+    "bfj": "^7.0.2",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "esbuild": "^0.14.30",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-loader": "^2.18.0",
+    "favicons": "^7.1.2",
+    "favicons-webpack-plugin": "^6.0.0-alpha.1",
+    "fs-extra": "^9.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "^26.6.3",
+    "jest-watch-typeahead": "0.6.1",
+    "localforage": "^1.9.0",
+    "localforage-getitems": "^1.4.2",
+    "localforage-removeitems": "^1.4.0",
+    "localforage-setitems": "^1.4.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "nanoid": "^3.1.31",
+    "netlify-auth-providers": "^1.0.0-alpha5",
+    "numeral": "^2.0.6",
+    "photon-colors": "^3.3.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.4.3",
+    "re-classnames": "^5.0.1",
+    "react": "^16.14.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-dev-utils": "^12.0.0",
+    "react-dom": "^16.14.0",
+    "react-feather": "^2.0.9",
+    "react-refresh": "^0.10.0",
+    "rescript": "^10.0.1",
+    "rescript-blossom": "^3.0.0",
+    "rescript-webapi": "^0.6.1",
+    "source-map-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
+    "typeface-fira-sans": "0.0.75",
+    "webpack": "^5.76.0",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-manifest-plugin": "^4.0.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "esbuild-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(rescript|@rescript/[a-z\\-]+|re-[a-z\\-]+|rescript-[a-z\\-]+)/)"
+    ],
+    "modulePaths": [],
+    "moduleNameMapper": {
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "resetMocks": true
+  }
+}

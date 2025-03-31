@@ -1,0 +1,23 @@
+{
+  "name": "coronate",
+  "reason": { "react-jsx": 3 },
+  "sources": [
+    { "dir": "src", "subdirs": true },
+    { "dir": "__tests__", "type": "dev" },
+    { "dir": "testutils", "type": "dev" }
+  ],
+  "package-specs": [{ "module": "es6", "in-source": true }],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "@ryyppy/rescript-promise",
+    "@rescript/react",
+    "re-classnames",
+    "rescript-webapi",
+    "rescript-blossom"
+  ],
+  "warnings": {
+    "number": "+A-48-42",
+    "error": "+A-3-44-102"
+  }
+}
